@@ -1,0 +1,17 @@
+[package]
+name = "rt-image-rotator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+eframe = { version="0.23.0", features = ["persistence"] }
+egui = "0.23.0"
+egui_extras = { version = "0.23.0", features = ["all_loaders"] }
+eyre = "0.6.8"
+image = { version = "0.24.7", features = ["jpeg", "png", "tiff"] }
+serde = { version = "1.0.189", features = ["derive"] }
+
+[profile.release]
+lto = "thin"
